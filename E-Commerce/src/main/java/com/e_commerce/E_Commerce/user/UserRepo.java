@@ -1,4 +1,4 @@
-package User;
+package com.e_commerce.E_Commerce.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

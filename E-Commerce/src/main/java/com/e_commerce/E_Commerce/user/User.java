@@ -1,4 +1,4 @@
-package User;
+package com.e_commerce.E_Commerce.user;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,9 +16,9 @@ public class User {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         @Column(name = "ID", nullable = false)
-        private long id;
+        private Long id;
 
-        @Column(name = "Name", nullable = false)
+        @Column(name = "name", nullable = false)
         private String name;
 
         @Column(name = "age", nullable = false)
@@ -28,7 +28,7 @@ public class User {
         private String email;
 
         @Column(name = "phone", nullable = false)
-        private double phone;
+        private String phone;
 
 
 }

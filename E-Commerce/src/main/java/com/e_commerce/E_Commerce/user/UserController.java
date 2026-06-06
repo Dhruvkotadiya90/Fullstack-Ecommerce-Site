@@ -1,4 +1,4 @@
-package User;
+package com.e_commerce.E_Commerce.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,13 +19,13 @@ public class UserController {
     }
 
     @PostMapping
-    public User saveUser(User user){
+    public User saveUser(@RequestBody User user){
         return service.saveUser(user);
     }
 
-    @PutMapping
-    public User updateUser(@RequestBody User user){
-        return service.saveUser(user);
+    @PutMapping("/{id}")
+    public User updateUser(@PathVariable Long id, @RequestBody User user){
+        return service.updateUser(id, user);
     }
 
     @DeleteMapping("/{id}")
